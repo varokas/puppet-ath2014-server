@@ -1,5 +1,8 @@
 forge "http://forge.puppetlabs.com"
 
+mod 'garethr/golang'
+mod 'puppetlabs/mongodb'
+
 # mod 'ntp',
 #   :git => 'git://github.com/puppetlabs/puppetlabs-ntp.git'
 

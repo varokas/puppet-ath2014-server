@@ -10,3 +10,6 @@ echo "Installing librarian-puppet, this might take a while..."
 sudo apt-get -y install rubygems
 sudo gem install librarian-puppet
 librarian-puppet install --verbose
+
+echo "Installing hiera-eyaml"
+sudo gem install hiera-eyaml
