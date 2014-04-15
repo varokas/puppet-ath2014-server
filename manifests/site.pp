@@ -50,3 +50,10 @@ haproxy::backend { 'ath2014':
   }
 }
 
+file { '/etc/init/ath2014.conf':
+  owner => "root",
+  group => "root",
+  mode => 0755,
+  ensure => "file",
+  source => 'puppet:///modules/server/ath2014-service.conf'
+}
