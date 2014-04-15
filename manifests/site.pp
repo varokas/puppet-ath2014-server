@@ -34,3 +34,19 @@ cron { mongobackup:
   hour => 0,
   minute => 0
 }
+
+class { 'haproxy': }
+haproxy::frontend { 'web':
+    ipaddress => '0.0.0.0', 
+    ports     => '80',
+    options   => { 
+      'default_backend' => 'ath2014'
+    }
+}
+
+haproxy::backend { 'ath2014':
+  options => {
+    'server' => 'localhost 127.0.0.1:3000'
+  }
+}
+
