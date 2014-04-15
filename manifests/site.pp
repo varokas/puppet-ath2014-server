@@ -1,4 +1,7 @@
 include 'golang'
+package { 'bzr':
+  ensure => 'present'
+}
 
 class {'::mongodb::globals':
   manage_package_repo => true,
