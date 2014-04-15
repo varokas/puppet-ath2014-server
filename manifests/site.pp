@@ -24,3 +24,10 @@ $users = {
   }
 }
 create_resources(user, $users, $users_default) 
+
+cron { mongobackup: 
+  command => "mongodump --db ath2014 --out /backup/`date +%Y-%m-%d`",
+  user => "root",
+  hour => 0,
+  minute => 0
+}
